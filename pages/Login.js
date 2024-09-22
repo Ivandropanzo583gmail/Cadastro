@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link'; // Importa o Link do Next.js
+import Head from 'next/head'
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -58,7 +59,7 @@ export default function Login() {
         </form>
         <div className="mt-6 flex justify-between">
           {/* Link para outra página */}
-          <Link href="/signup">
+          <Link href="/">
             <a className="text-blue-600 hover:underline">Cadastrar-se</a>
           </Link>
 
@@ -71,6 +72,10 @@ export default function Login() {
           </button>
         </div>
       </div>
+      <Head>
+        <link rel="shortcut icon" href="./SignUp/cadastro.png" />
+        <title>Cadastro</title>
+      </Head>
     </div>
   );
 }
